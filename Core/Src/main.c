@@ -21,6 +21,7 @@
 #include "adc.h"
 #include "dma.h"
 #include "fdcan.h"
+#include "tim.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -91,6 +92,7 @@ int main(void)
   MX_FDCAN1_Init();
   MX_ADC1_Init();
   MX_FDCAN2_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
   application_entry_point();
   /* USER CODE END 2 */

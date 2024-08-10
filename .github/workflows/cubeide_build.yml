@@ -1,6 +1,10 @@
 name: cubeide_build
 
 on: [push]
+
+env:
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -20,7 +24,7 @@ jobs:
           && apt-get update \
           && apt-get install -y git
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           path: 'repo'
           submodules: recursive
